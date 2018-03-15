@@ -14,10 +14,10 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
                         <li>
-                            <a href="#">
+                             <a href="{{ route('items.create') }}">
                                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                 アイテムを追加
-                              </a>
+                            </a>                             
                         </li>
 
                         <li class="dropdown">
@@ -28,10 +28,6 @@
                                 {{ Auth::user()->name }}
                                 <span class="caret"></span>
                             </a>
-                            <a href="{{ route('items.create') }}">
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                アイテムを追加
-                            </a>                            
                             <ul class="dropdown-menu">
                                 <li>
                                     <a href="#">マイページ</a>
