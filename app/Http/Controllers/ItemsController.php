@@ -71,6 +71,17 @@ class ItemsController extends Controller
           'want_users' => $want_users,
       ]);
     }
+    
+    public function show($id)
+    {
+      $item = Item::find($id);
+      $have_users = $item->have_users;
+
+      return view('items.show', [
+          'item' => $item,
+          'have_users' => $have_users,
+      ]);
+    }    
 
     /**
      * Show the form for editing the specified resource.
